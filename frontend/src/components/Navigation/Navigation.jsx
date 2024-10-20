@@ -4,6 +4,7 @@ import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from "../LoginFormModal/LoginFormModal";
 import OpenModalButton from "../OpenModalButton/OpenModalButton";
+import SignupFormModal from "../SignUpModal/SignupFormModal";
 
 
 function Navigation({isLoaded}) {
@@ -24,7 +25,10 @@ function Navigation({isLoaded}) {
         />
       </li>
       <li>
-        <NavLink to="/signup">Sign Up</NavLink>
+        <OpenModalButton
+        modalComponent={<SignupFormModal />}
+        buttonText={'Sign Up'}
+        />
       </li>
     </>
   );
